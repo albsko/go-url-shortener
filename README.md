@@ -1,2 +1,1 @@
-# go-url-shortener
-URL shortener in Golang
+This repo contains simple URL shortener implementations in Go programming language.
