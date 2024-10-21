@@ -57,7 +57,7 @@ func (us *URLShortener) shortenHandler(w http.ResponseWriter, r *http.Request) {
 	shortURL := shortenedURL()
 	us.store(shortURL, longURL)
 
-	fmt.Fprintf(w, "shortened URL: http://localhost:8080/%s", shortURL)
+	fmt.Fprintf(w, "shortened URL: http://localhost:8080/%s\n", shortURL)
 }
 
 func shortenedURL() string {
@@ -69,6 +69,7 @@ func shortenedURL() string {
 	return string(result)
 }
 
+// curl -X POST -d "url=https://www.google.com" http://localhost:8080/shorten
 func main() {
 	us := NewURLShortener()
 
@@ -76,7 +77,6 @@ func main() {
 	http.HandleFunc("/shorten", us.shortenHandler)
 
 	port := ":8080"
-	fmt.Println("local")
 	err := http.ListenAndServe(port, nil)
 	if err != nil {
 		log.Fatalf("failed to listen and serve on %s", port)
