@@ -14,10 +14,10 @@
     // gopls
     "go.useLanguageServer": true,
     "gopls": {
-        "formatting.local": "github.com/golang-templates/seed",
+        "formatting.local": "github.com/albsko/go-url-shortener",
         "formatting.gofumpt": true
     },
-    // golangci-lint  
+    // golangci-lint
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"

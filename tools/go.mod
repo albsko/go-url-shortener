@@ -1,4 +1,4 @@
-module github.com/golang-templates/seed/build
+module github.com/albsko/go-url-shortener/build
 
 go 1.23.0
 

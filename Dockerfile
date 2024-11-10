@@ -1,3 +1,3 @@
 FROM scratch
-COPY seed /
-ENTRYPOINT ["/seed"]
+COPY go-url-shortener /
+ENTRYPOINT ["/go-url-shortener"]
